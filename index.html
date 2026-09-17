@@ -101,6 +101,10 @@ a:hover{color:var(--accent-deep)}
 .auth-badge{border:1px dashed rgba(255,255,255,.5);border-radius:10px;padding:10px 18px;font-size:13px;color:#E7F0F8;text-align:center}
 .auth-badge b{display:block;font-size:15px;color:#fff}
 
+/* ===== 公司视频 ===== */
+.video-box{max-width:820px;margin:0 auto;border-radius:16px;overflow:hidden;background:#0B1F30;box-shadow:var(--shadow)}
+.video-box video{display:block;width:100%;max-height:62vh;object-fit:contain;background:#0B1F30}
+
 /* ===== 产品卡片 ===== */
 .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
 .p-card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:transform .16s ease,box-shadow .16s ease;display:flex;flex-direction:column}
@@ -340,6 +344,22 @@ a.dl-card:hover{border-color:var(--accent);box-shadow:var(--shadow)}
         </div>
       </div>
       <div class="auth-badge"><b>授权书 / 证书</b>待上传（联系后获取）</div>
+    </div>
+  </div>
+
+  <div class="section alt">
+    <div class="sec-head">
+      <div class="sec-tag"><svg class="ring-mini" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M22 8.5 12 3 2 8.5v7l10 5.5 10-5.5z"/><path d="M2 8.5 12 14l10-5.5"/><path d="M12 14v11"/></svg>COMPANY · 公司介绍</div>
+      <h2>了解 Anyseals</h2>
+      <p class="sec-desc">跟随镜头认识 Anyseals——从研发、制造到质量管控，了解我们正在供应的高品质密封产品。</p>
+    </div>
+    <div class="wrap">
+      <div class="video-box">
+        <video controls preload="metadata" poster="https://aka.doubaocdn.com/s/rEUU2R2UJ1">
+          <source src="https://aka.doubaocdn.com/s/hJx0k3T4l3" type="video/mp4">
+          您的浏览器不支持视频播放，请升级浏览器后查看。
+        </video>
+      </div>
     </div>
   </div>
 
