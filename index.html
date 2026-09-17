@@ -1031,6 +1031,57 @@ a.dl-card:hover{border-color:var(--accent);box-shadow:var(--shadow)}
     var canon = document.querySelector('link[rel="canonical"]');
     if(canon){ canon.setAttribute("href", "https://zenhill-tech.com/" + location.hash); }
   }
+  /* 动态注入页面级 JSON-LD（Product / BreadcrumbList / ItemList） */
+  function setPageLD(ldObj){
+    var el = document.getElementById("page-ld");
+    if(!el){
+      el = document.createElement("script");
+      el.type = "application/ld+json";
+      el.id = "page-ld";
+      document.head.appendChild(el);
+    }
+    el.textContent = JSON.stringify(ldObj);
+  }
+  function removePageLD(){
+    var el = document.getElementById("page-ld");
+    if(el){ el.parentNode.removeChild(el); }
+  }
+  function productLD(p, cat){
+    var crumbs = [
+      {"@type":"ListItem","position":1,"name":"产品中心","item":"https://zenhill-tech.com/#/products"},
+      {"@type":"ListItem","position":2,"name":cat.name,"item":"https://zenhill-tech.com/#/category/"+cat.id},
+      {"@type":"ListItem","position":3,"name":p.t,"item":"https://zenhill-tech.com/#/product/"+p.t}
+    ];
+    return [
+      {
+        "@context":"https://schema.org",
+        "@type":"Product",
+        "name":p.t+" "+(p.g||"")+"密封件",
+        "image":p.img,
+        "description":(p.t+"（"+(p.g||"")+"）密封件产品：可选材料 "+(p.m||"")+"，耐温范围 "+(p.tm||"")+"，最大速度 "+(p.sp||"")+"，最大压力 "+(p.pr||"")+"。Anyseals 原厂正品，由紫赫商贸（上海）有限公司（Anyseals 中国授权经销商）供应。").replace(/\s+/g," "),
+        "brand":{"@type":"Brand","name":"Anyseals NV"},
+        "category":cat.name,
+        "material":p.m||"",
+        "url":"https://zenhill-tech.com/#/product/"+p.t
+      },
+      {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":crumbs}
+    ];
+  }
+  function categoryLD(c){
+    var list = [];
+    PRODUCTS.forEach(function(p){
+      if(p.c===c.id){
+        list.push({"@type":"ListItem","position":list.length+1,"name":p.t,"url":"https://zenhill-tech.com/#/product/"+p.t});
+      }
+    });
+    return [
+      {"@context":"https://schema.org","@type":"ItemList","name":c.name+"产品列表","numberOfItems":list.length,"itemListElement":list},
+      {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+        {"@type":"ListItem","position":1,"name":"产品中心","item":"https://zenhill-tech.com/#/products"},
+        {"@type":"ListItem","position":2,"name":c.name,"item":"https://zenhill-tech.com/#/category/"+c.id}
+      ]}
+    ];
+  }
   function router(){
     var h = location.hash || "#/home";
     var parts = h.replace(/^#\//,"").split("/");
@@ -1046,16 +1097,22 @@ a.dl-card:hover{border-color:var(--accent);box-shadow:var(--shadow)}
       vp.classList.add("on");
       var c = CATEGORIES.filter(function(x){return x.id===parts[1];})[0];
       applyMeta({title:(c?c.name:"产品分类")+" · 产品中心 · Anyseals 密封件中国授权经销商", desc:(c?c.name+"全系列密封件产品："+c.brief+"正品原厂、支持技术选型与快速报价，由 Anyseals 中国授权经销商紫赫商贸（上海）有限公司供应。":"Anyseals 全系列密封件产品，正品原厂、支持技术选型与快速报价。")});
+      if(c){ setPageLD(categoryLD(c)); }
     } else if(page==="product" && parts[1]){
       renderProduct(parts[1]);
       var vp2 = document.getElementById("view-product");
       vp2.classList.add("on");
       var p = PRODUCTS.filter(function(x){return x.t===parts[1];})[0];
       applyMeta({title:(p?p.t+" 密封件产品详情 · "+((p&&p.g)||"Anyseals"):"产品详情")+" · Anyseals 密封件中国授权经销商", desc:(p?p.t+"（"+(p.g||"")+"）密封件产品详情：可选材料 "+(p.m||"")+"，耐温 "+(p.tm||"")+"，最大压力 "+(p.pr||"")+"。正品原厂、常备现货，由 Anyseals 中国授权经销商紫赫商贸（上海）有限公司供应。":"Anyseals 密封件产品详情与规格参数，正品原厂、常备现货。")});
+      if(p){
+        var pc = CATEGORIES.filter(function(x){return x.id===p.c;})[0];
+        if(pc){ setPageLD(productLD(p, pc)); }
+      }
     } else {
       var el = document.getElementById(viewId);
       if(el){ el.classList.add("on"); }
       applyMeta(META[page] || META.home);
+      removePageLD();
     }
     window.scrollTo(0,0);
     var nav = document.getElementById("navLinks");
