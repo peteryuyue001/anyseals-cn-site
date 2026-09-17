@@ -3,8 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anyseals 中国授权经销商 · 密封件产品展示</title>
-<meta name="description" content="Anyseals 中国授权经销商，供应静密封、旋转密封、液压密封、气动密封、防尘密封与导向挡圈全系列密封件，正品现货，技术支持。">
+<title>Anyseals 密封件中国授权经销商｜紫赫商贸（上海）有限公司 - O型圈液压密封现货供应</title>
+<meta name="description" content="紫赫商贸（上海）有限公司是 Anyseals NV 中国大陆官方授权经销商，供应 O 型圈、静密封、旋转密封、液压密封、气动密封、挡圈全系列密封件，正品原厂、常备现货，提供密封选型、快速报价与技术支持。">
+<link rel="canonical" href="https://zenhill-tech.com/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "紫赫商贸（上海）有限公司",
+  "alternateName": ["Anyseals 中国授权经销商", "Zenhill Technology (Shanghai) Co., Ltd."],
+  "url": "https://zenhill-tech.com/",
+  "email": "sales@zenhill-tech.com",
+  "telephone": "+86 18616587029",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "陆翔路1018号龙湖天街",
+    "addressLocality": "上海市宝山区",
+    "addressRegion": "上海市",
+    "addressCountry": "CN"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+86 18616587029",
+    "contactType": "sales",
+    "email": "sales@zenhill-tech.com",
+    "availableLanguage": ["zh-CN", "en"]
+  }
+}
+</script>
 <link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap">
 <style>
 /* ===== 设计令牌 ===== */
@@ -371,7 +397,7 @@ a.dl-card:hover{border-color:var(--accent);box-shadow:var(--shadow)}
     <div class="wrap">
       <div class="video-box">
         <video controls preload="metadata" poster="https://aka.doubaocdn.com/s/rEUU2R2UJ1">
-          <source src="https://aka.doubaocdn.com/s/hJx0k3T4l3" type="video/mp4">
+          <source src="https://aka.doubaocdn.com/s/NIAyqigVDO" type="video/mp4">
           您的浏览器不支持视频播放，请升级浏览器后查看。
         </video>
       </div>
@@ -530,7 +556,7 @@ a.dl-card:hover{border-color:var(--accent);box-shadow:var(--shadow)}
   <div class="section">
     <div class="wrap">
       <div class="split">
-        <div class="visual"><video controls preload="metadata" poster="https://aka.doubaocdn.com/s/qbXwthjs0y"><source src="https://aka.doubaocdn.com/s/xMREu21na9" type="video/mp4">您的浏览器不支持视频播放，请升级浏览器后查看。</video></div>
+        <div class="visual"><video controls preload="metadata" poster="https://aka.doubaocdn.com/s/qbXwthjs0y"><source src="https://aka.doubaocdn.com/s/EDFNTGUqz5" type="video/mp4">您的浏览器不支持视频播放，请升级浏览器后查看。</video></div>
         <div>
           <div class="sec-tag"><svg class="ring-mini" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg>ABOUT · 公司介绍</div>
           <h2>紫赫商贸（上海）有限公司</h2>
@@ -890,13 +916,15 @@ a.dl-card:hover{border-color:var(--accent);box-shadow:var(--shadow)}
   /* ===== 渲染 ===== */
   function catCard(c){
     return '<a class="p-card" href="#/category/'+c.id+'">'+
-      '<div class="p-img"><img src="'+c.img+'" alt="'+c.name+'"></div>'+
+      '<div class="p-img"><img src="'+c.img+'" alt="Anyseals '+c.name+'密封件" loading="lazy"></div>'+
       '<div class="p-body"><h3>'+c.name+'</h3><span class="p-en">'+c.en+'</span>'+
       '<p>'+c.brief+'</p><span class="p-link">进入分类<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>';
   }
   function prodCard(p){
+    var pc = CATEGORIES.filter(function(x){return x.id===p.c;})[0];
+    var alt = "Anyseals "+p.t+" "+(pc?pc.name:"密封件")+"产品";
     return '<a class="p-card p-card-sm" href="#/product/'+p.t+'">'+
-      '<div class="p-img"><img src="'+p.img+'" alt="'+p.t+'"></div>'+
+      '<div class="p-img"><img src="'+p.img+'" alt="'+alt+'" loading="lazy"></div>'+
       '<div class="p-body"><h3>'+p.t+'</h3><span class="p-en">'+p.g+'</span>'+
       '<p>'+p.n+'</p><span class="p-link">产品详情<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>';
   }
@@ -964,7 +992,7 @@ a.dl-card:hover{border-color:var(--accent);box-shadow:var(--shadow)}
         '<h1>'+p.t+'</h1><div class="en">'+p.g+' · '+p.n+'</div>'+
       '</div></div>'+
       '<div class="section"><div class="wrap"><div class="detail-body">'+
-        '<div class="detail-img"><img src="'+p.img+'" alt="'+p.t+'"></div>'+
+        '<div class="detail-img"><img src="'+p.img+'" alt="Anyseals '+p.t+' '+cat.name+'密封件产品图" loading="lazy"></div>'+
         '<div class="detail-txt">'+
           '<p style="color:var(--muted);font-size:14.5px;line-height:1.7">'+p.d+'</p>'+
           '<h2>规格参数</h2><div class="spec-grid">'+
@@ -985,16 +1013,23 @@ a.dl-card:hover{border-color:var(--accent);box-shadow:var(--shadow)}
   }
 
   /* ===== 路由 ===== */
-  var TITLES = {
-    "home":"Anyseals 中国授权经销商 · 密封件产品展示",
-    "products":"产品中心 · Anyseals 中国授权经销商",
-    "compounds":"材料中心 · Anyseals 中国授权经销商",
-    "applications":"行业应用 · Anyseals 中国授权经销商",
-    "downloads":"技术资料 · Anyseals 中国授权经销商",
-    "about":"关于我们 · Anyseals 中国授权经销商",
-    "news":"新闻动态 · Anyseals 中国授权经销商",
-    "contact":"联系我们 · Anyseals 中国授权经销商"
+  var META = {
+    "home":{title:"Anyseals 密封件中国授权经销商｜紫赫商贸（上海）有限公司 - O型圈液压密封现货供应", desc:"紫赫商贸（上海）有限公司是 Anyseals NV 中国大陆官方授权经销商，供应 O 型圈、静密封、旋转密封、液压密封、气动密封、挡圈全系列密封件，正品原厂、常备现货，提供密封选型、快速报价与技术支持。"},
+    "products":{title:"产品中心 · Anyseals 密封件中国授权经销商", desc:"Anyseals 全系列密封件产品中心：静密封、旋转密封件、液压密封件、气动密封件、挡圈五大类 30 子类 150+ 型号，正品原厂、支持技术选型与快速报价。"},
+    "compounds":{title:"材料中心 · Anyseals 密封件中国授权经销商", desc:"Anyseals 密封件可选材料一览：NBR、FKM、EPDM、VMQ、HNBR、FFKM、PTFE 等，覆盖耐温、耐介质、食品级等各类工业工况选型需求。"},
+    "applications":{title:"行业应用 · Anyseals 密封件中国授权经销商", desc:"Anyseals 密封件广泛应用于液压、气动、工程机械、石油化工、食品制药等工业领域，紫赫商贸（上海）有限公司提供行业化密封解决方案。"},
+    "downloads":{title:"技术资料下载 · Anyseals 密封件中国授权经销商", desc:"Anyseals 官方技术资料与产品样本免费下载：密封件选型手册、产品总样本、材料特性说明，正品原厂资料，由紫赫商贸（上海）有限公司提供。"},
+    "about":{title:"关于我们 · Anyseals 密封件中国授权经销商｜紫赫商贸（上海）有限公司", desc:"紫赫商贸（上海）有限公司是 Anyseals NV 中国大陆官方授权经销商（2026.06-2028.05），通过 ISO 9001:2015 质量管理体系认证，专注工业密封件正品供应与技术选型服务。"},
+    "news":{title:"新闻动态 · Anyseals 密封件中国授权经销商", desc:"Anyseals 中国授权经销商（紫赫商贸（上海）有限公司）新闻动态：授权合作、产品到货、技术更新与行业资讯。"},
+    "contact":{title:"联系我们 · Anyseals 密封件中国授权经销商｜紫赫商贸（上海）有限公司", desc:"联系 Anyseals 中国授权经销商紫赫商贸（上海）有限公司：电话 +86 18616587029，邮箱 sales@zenhill-tech.com，地址上海市宝山区陆翔路1018号龙湖天街，欢迎密封件选型咨询与询价。"}
   };
+  function applyMeta(m){
+    document.title = m.title;
+    var d = document.querySelector('meta[name="description"]');
+    if(d){ d.setAttribute("content", m.desc); }
+    var canon = document.querySelector('link[rel="canonical"]');
+    if(canon){ canon.setAttribute("href", "https://zenhill-tech.com/" + location.hash); }
+  }
   function router(){
     var h = location.hash || "#/home";
     var parts = h.replace(/^#\//,"").split("/");
@@ -1009,16 +1044,17 @@ a.dl-card:hover{border-color:var(--accent);box-shadow:var(--shadow)}
       var vp = document.getElementById("view-product");
       vp.classList.add("on");
       var c = CATEGORIES.filter(function(x){return x.id===parts[1];})[0];
-      document.title = (c?c.name:"分类") + " · 产品中心 · Anyseals 中国授权经销商";
+      applyMeta({title:(c?c.name:"产品分类")+" · 产品中心 · Anyseals 密封件中国授权经销商", desc:(c?c.name+"全系列密封件产品："+c.brief+"正品原厂、支持技术选型与快速报价，由 Anyseals 中国授权经销商紫赫商贸（上海）有限公司供应。":"Anyseals 全系列密封件产品，正品原厂、支持技术选型与快速报价。")});
     } else if(page==="product" && parts[1]){
       renderProduct(parts[1]);
       var vp2 = document.getElementById("view-product");
       vp2.classList.add("on");
-      document.title = "产品详情 · Anyseals 中国授权经销商";
+      var p = PRODUCTS.filter(function(x){return x.t===parts[1];})[0];
+      applyMeta({title:(p?p.t+" 密封件产品详情 · "+((p&&p.g)||"Anyseals"):"产品详情")+" · Anyseals 密封件中国授权经销商", desc:(p?p.t+"（"+(p.g||"")+"）密封件产品详情：可选材料 "+(p.m||"")+"，耐温 "+(p.tm||"")+"，最大压力 "+(p.pr||"")+"。正品原厂、常备现货，由 Anyseals 中国授权经销商紫赫商贸（上海）有限公司供应。":"Anyseals 密封件产品详情与规格参数，正品原厂、常备现货。")});
     } else {
       var el = document.getElementById(viewId);
       if(el){ el.classList.add("on"); }
-      document.title = TITLES[page] || TITLES.home;
+      applyMeta(META[page] || META.home);
     }
     window.scrollTo(0,0);
     var nav = document.getElementById("navLinks");
