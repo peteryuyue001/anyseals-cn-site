@@ -532,6 +532,10 @@ a.dl-card:hover{border-color:var(--accent);box-shadow:var(--shadow)}
         </table>
       </div>
       <p style="font-size:12.5px;color:var(--faint);margin-top:12px">注：耐温范围与特性为常见资料口径，具体牌号请以 Anyseals 官方材料规格书为准。</p>
+      <div style="margin-top:20px;padding:18px 20px;background:#F5F8FB;border-left:3px solid var(--accent);border-radius:0 10px 10px 0">
+        <h3 style="font-size:15px;font-weight:700;color:var(--navy);margin:0 0 8px">材料选型建议</h3>
+        <p style="color:var(--muted);font-size:13.5px;line-height:1.7;margin:0"><b>NBR 丁腈橡胶</b>性价比最高，适用于液压气动与矿物油工况；<b>FKM 氟橡胶</b>耐高温耐化学，适用于汽车与化工高温场合；<b>EPDM 三元乙丙</b>耐水蒸气与极性介质，适用于食品医疗与冷却系统；<b>HNBR 氢化丁腈</b>耐热耐油优于 NBR，适用于油田与汽车传动；<b>FFKM 全氟醚橡胶</b>耐强腐蚀耐高温高压，适用于半导体、石油化工等苛刻工况。如需密封件材料选型支持，欢迎联系技术团队。</p>
+      </div>
     </div>
   </div>
 </section>
@@ -547,6 +551,10 @@ a.dl-card:hover{border-color:var(--accent);box-shadow:var(--shadow)}
   <div class="section">
     <div class="wrap">
       <div class="app-grid" id="appGridAll"></div>
+      <div style="margin-top:24px;padding:18px 20px;background:#F5F8FB;border-left:3px solid var(--accent);border-radius:0 10px 10px 0">
+        <h3 style="font-size:15px;font-weight:700;color:var(--navy);margin:0 0 8px">行业密封选型</h3>
+        <p style="color:var(--muted);font-size:13.5px;line-height:1.7;margin:0">我们的密封件覆盖 <b>石油化工、半导体、食品饮料、医疗制药、海洋工程、氢能源</b> 等行业：石油化工工况需 NORSOK、API 610、NACE 认证材料；半导体与医疗需 FDA、USP Class VI、3-A 食品级材料；食品饮料需 FDA 与欧盟 1935/2004 认证。提供行业化密封选型与批准级特殊材料，可为壳牌、道达尔、埃克森美孚等国际终端客户供货。</p>
+      </div>
     </div>
   </div>
 </section>
@@ -589,6 +597,9 @@ a.dl-card:hover{border-color:var(--accent);box-shadow:var(--shadow)}
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>常备现货库存与快速交期</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>技术选型与售后服务支持</li>
           </ul>
+          <div style="margin-top:16px;padding:14px 16px;background:#F5F8FB;border-left:3px solid var(--accent);border-radius:0 10px 10px 0">
+            <p style="color:var(--muted);font-size:13.5px;line-height:1.7;margin:0">紫赫商贸（上海）有限公司为 <b>Anyseals NV 中国大陆官方授权经销商</b>（2026.06–2028.05），隶属于瑞士百年集团 ANGST+PFISTER COMPANY。Anyseals 全线产品通过 <b>ISO 9001:2015</b> 质量管理体系认证，批次返回比利时总部由欧洲品控团队光学检测与人工复检，每件产品标注欧洲标准批次号与材料代码，全流程可追溯。认证覆盖 FDA、USP Class VI、3-A、NORSOK、API 610 等，可为壳牌、道达尔、埃克森美孚等国际终端客户提供批准级特殊材料。</p>
+          </div>
         </div>
       </div>
 
@@ -988,13 +999,20 @@ a.dl-card:hover{border-color:var(--accent);box-shadow:var(--shadow)}
       }).join("");
       return '<div class="cat-group"><h3 class="cat-group-title">'+g[0]+'<span>'+g[1].length+' 个型号</span></h3><div class="card-grid">'+list+'</div></div>';
     }).join("");
+    var SEOINTRO = {
+      static:'<p style="margin-top:10px;color:var(--muted);font-size:13.5px;line-height:1.7">静密封以 <b>O型圈（O-ring）</b> 为核心，覆盖 DIN、JIS、AS568、公制等全球主流标准，常用 NBR 丁腈、FKM 氟橡胶、EPDM 三元乙丙、FFKM 全氟醚等材料，广泛应用于液压气动、食品医药、石油化工与半导体等行业。卫生级密封件通过 FDA 认证，满足 3-A 与欧盟 1935/2004 食品级要求。</p>',
+      rotary:'<p style="margin-top:10px;color:var(--muted);font-size:13.5px;line-height:1.7">旋转密封件以 <b>骨架油封（oil seal）</b>、盒式油封（cassette seal）与唇封为核心，符合 DIN 3760 标准，耐高速旋转（最高 35 m/s），常用 NBR、FKM、PTFE 材料，广泛应用于汽车、电机、泵阀与工程机械等旋转轴密封工况。</p>',
+      hydraulic:'<p style="margin-top:10px;color:var(--muted);font-size:13.5px;line-height:1.7">液压密封件包含活塞密封、活塞杆密封、防尘圈与导向环，耐高压（最高 70 MPa）高频往复，采用 PTFE 青铜 + O型圈或 TPU 组合结构，常用 NBR、FKM、PU 材料，广泛应用于工程机械、液压设备、机床与冶金等高压工况。</p>',
+      pneumatic:'<p style="margin-top:10px;color:var(--muted);font-size:13.5px;line-height:1.7">气动密封件包含气缸活塞密封与活塞杆密封，适配低压高速（1.2~1.6 MPa，1 m/s）工况，常用 NBR 丁腈与 TPU 材料，广泛应用于自动化设备、气动元件与包装机械等领域。</p>',
+      circlips:'<p style="margin-top:10px;color:var(--muted);font-size:13.5px;line-height:1.7">挡圈（circlips）包含轴用挡圈（DIN 471）、孔用挡圈（DIN 472）与固定环（DIN 6799），弹簧钢或不锈钢材质，用于轴的轴向定位与固定，广泛应用于机械传动、电机、汽车与通用工业设备。</p>'
+    };
     box.innerHTML =
       '<div class="detail-head"><div class="wrap">'+
         '<div class="crumbs"><a href="/products">产品中心</a> / '+c.name+'</div>'+
         '<h1>'+c.name+'</h1><div class="en">'+c.en+'</div>'+
       '</div></div>'+
       '<div class="section"><div class="wrap">'+
-        '<div class="cat-intro"><p>'+c.desc+'</p><div class="spec-grid">'+specs+'</div><ul class="checks" style="margin-top:12px">'+feats+'</ul></div>'+
+        '<div class="cat-intro"><p>'+c.desc+'</p>'+(SEOINTRO[c.id]||'')+'<div class="spec-grid">'+specs+'</div><ul class="checks" style="margin-top:12px">'+feats+'</ul></div>'+
         groups+
       '</div></div>';
   }
@@ -1025,6 +1043,8 @@ a.dl-card:hover{border-color:var(--accent);box-shadow:var(--shadow)}
             specHtml('最大速度', p.sp)+
             specHtml('最大压力', p.pr)+
           '</div>'+
+          '<h2>应用行业与选型</h2>'+
+          '<p style="color:var(--muted);font-size:14px;line-height:1.7;margin:8px 0 0">该款 <b>'+p.t+'</b> '+cat.name+'（'+(p.g||'')+'）适用于液压气动、工程机械、石油化工、食品医药等工业工况，可选材料：'+(p.m||'NBR/FKM/EPDM')+'。如需 '+cat.name+' 选型、现货库存或报价，欢迎联系技术团队。</p>'+
           '<h2>技术资料下载</h2><div class="dl-btns">'+(dls||'<span class="state">资料整理中，联系索取</span>')+'</div>'+
           '<div class="detail-cta">'+
             '<a class="btn btn-primary" href="/contact">在线询价</a>'+
